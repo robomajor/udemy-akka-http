@@ -5,7 +5,8 @@ import akka.http.scaladsl.model.{ContentTypes, StatusCodes}
 import akka.http.scaladsl.server.Directives._
 import akka.http.scaladsl.server.MethodRejection
 import akka.http.scaladsl.testkit.ScalatestRouteTest
-import org.scalatest.{Matchers, WordSpec}
+import org.scalatest.matchers.should.Matchers
+import org.scalatest.wordspec.AnyWordSpec
 import spray.json._
 
 import scala.concurrent.Await
@@ -18,7 +19,7 @@ trait BookJsonProtocol extends DefaultJsonProtocol {
   implicit val bookFormat: RootJsonFormat[Book] = jsonFormat3(Book)
 }
 
-class RouteDSLSpec extends WordSpec with Matchers with ScalatestRouteTest with BookJsonProtocol {
+class RouteDSLSpec extends AnyWordSpec with Matchers with ScalatestRouteTest with BookJsonProtocol {
 
   import RouteDSLSpec._
 

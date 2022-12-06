@@ -2,11 +2,11 @@ name := "udemy-akka-http"
 
 version := "0.1"
 
-scalaVersion := "2.12.8"
+scalaVersion := "2.13.10"
 
-val akkaVersion = "2.5.20"
-val akkaHttpVersion = "10.1.7"
-val scalaTestVersion = "3.0.5"
+val akkaVersion = "2.7.0"
+val akkaHttpVersion = "10.4.0"
+val scalaTestVersion = "3.2.14"
 
 libraryDependencies ++= Seq(
   // akka streams
